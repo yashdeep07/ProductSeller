@@ -17,7 +17,7 @@ public class Test {
         String userInput = "0";
         double isbn ;
         while(userInput.equals("0") ){
-            System.out.print("To Search a Book type '1'\nTo Order directly using ISBN type '2' \nTo Add a Book type '3' \nTo Show All Books type '4'\n");
+            System.out.print("To Search a Book type '1'\nTo Order directly using ISBN type '2' \nTo Add a Book type '3' \nTo Show All Books type '4'\nTo sort all the books tyepe '5'");
             userInput = in.nextLine();
 
             switch (userInput){
@@ -48,7 +48,7 @@ public class Test {
                     break;
 
                 case "5" :
-                    //usr.sortByField(Globals.isbnList);
+                    usr.sortByField(Globals.isbnList);
             }
 
             System.out.println("To Continue type '0'");

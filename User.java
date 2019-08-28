@@ -79,9 +79,9 @@ public class User {
             entry.getValue().showInfo();
         }
     }
-/*
+
     public static void sortByField(ArrayList<Double> arr) {
-        System.out.println("Ye field to h hi nahi haha!!");
+        
         Scanner in = new Scanner(System.in);
         String userInput = in.nextLine();
         String field = userInput;
@@ -109,13 +109,4 @@ public class User {
     }
 
 
-
-    public void showAllBooks(){
-        int size = Globals.isbnMap.size();
-
-    }
-*/
-
-
 }
-
