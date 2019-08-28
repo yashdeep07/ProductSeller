@@ -27,10 +27,14 @@ public class User {
         double isbn = in.nextDouble();
         Book b = new Book(title, author, isbn);
         Globals.isbnMap.put(isbn, b);
-        if (!Globals.bookTitleMap.containsKey(title)) {
+        if (Globals.bookTitleMap.containsKey(title)) {
+            Globals.bookTitleMap.get(title).add(isbn);
+
+        } else {
             Globals.bookTitleMap.put(title, new ArrayList<Double>());
+            Globals.bookTitleMap.get(title).add(isbn);
         }
-        Globals.bookTitleMap.get(b).add(isbn);
+        
 
         System.out.println("Book has been added to the Database");
     }
@@ -62,6 +66,17 @@ public class User {
         }
         else{
             System.out.println("Book with this ISBN is not present!");
+        }
+    }
+
+    public void showAllBooks(Map<Double,Book> map){
+        Iterator<Map.Entry<Double, Book>> itr = map.entrySet().iterator();
+
+        while(itr.hasNext())
+        {
+            Map.Entry<Double, Book> entry = itr.next();
+            System.out.println("Key = " + entry.getKey());
+            entry.getValue().showInfo();
         }
     }
 /*
@@ -103,3 +118,4 @@ public class User {
 
 
 }
+

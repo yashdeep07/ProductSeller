@@ -43,7 +43,8 @@ public class Test {
                     break;
 
                 case "4" :
-                    System.out.println("show books!");
+                    usr.showAllBooks(Globals.isbnMap);
+                    //System.out.println("show books!");
                     break;
 
                 case "5" :
@@ -60,3 +61,4 @@ public class Test {
 
     }
 }
+
