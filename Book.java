@@ -11,7 +11,7 @@ public class Book {
     private int publishedYear;
     private BindingType bindingType;
     private double price;
-    public int count = 100;
+    public int count = 50;
 
     Book(String title, String author, double isbn){
         this.title = title;
